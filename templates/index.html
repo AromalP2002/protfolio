@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script  src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <!-- Off-Canvas Sidebar -->
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Top</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Open Sidebar Button -->
+    <span class="openbtn" onclick="openNav()">&#9776;</span>
+
+    <!-- Main Content -->
+    <div class="main-content" id="top" class="top">
+        <header class="header">
+            <div class="container">
+                <h1>AROMAL P</h1>
+            </div>
+            <div class="profile-container">
+                <img src="{{ url_for('static', filename='images/prot.jpeg') }}" alt="Profile Image" class="profile-image">
+                <p>Full-Stack Web Developer</p>
+            </div>
+        </header>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Hello! I'm <strong>Aromal p</strong>, a <span class="highlight">Full-Stack Web Developer</span> who enjoys crafting thoughtful and impactful web solutions.</p>
+        
+               
+        
+                <!-- Social Links Section -->
+                <div class="social-links">
+                    <h3>Connect with Me</h3>
+                    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/AromalP2002" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://instagram.com/mr.aromal123__" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>                
+            </div>
+        </section>        
+        <section id="resume" class="resume">
+            <div class="container">
+                <h2>Resume</h2>
+                <p>Preview my resume below or download it directly.</p>
+                <iframe src="../static/images/cv.pdf" width="100%" height="600px" style="border: none;"></iframe>
+            </div>
+        </section>        
+  
+
+        
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <p>Highlights of my projects.</p>
+                <div class="project-cards">
+                    <div class="project-card" onclick="toggleDetails(this)">
+                        <img src="../static/images/croma ss.png" alt="Project 1 Image">
+                        <h3>Croma Electronics</h3>
+                        <p><b>Croma clone</b></p>
+                        <div class="project-details">
+                            <p>Developed croma Stores, an e-commerce platform for online provision shopping, allowing the shop owner (admin) to manage inventory and users to browse and purchase essentials conveniently.</p>
+                            <p> Technologies Used:Django (Backend), HTML, CSS, JavaScript (Frontend) .</p>
+                            <!-- <a href="https://karthikkv.pythonanywhere.com/" target="_blank" class="btn">View Demo</a> -->
+                            <a href="https://github.com/AromalP2002/croma11" target="_blank" class="btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="toggleDetails(this)">
+                        <img src="../static/images/bms ss.png" alt="Project 2 Image">
+                        <h3>Book my show</h3>
+                        <p><b>Book my show clone</b></p>
+                        <div class="project-details">
+                            <p>Developed Inquestor, is a streamlined platform for online case registration, enabling users to manage cases easily while admins oversee agents and adding case category, ensuring efficiency and security in private investigations.</p>
+                            <P>Technologies Used:Django (Backend), HTML, CSS, JavaScript (Frontend) .</p>
+                            <a href="#" target="_blank" class="btn">View Demo</a>
+                            <a href="https://github.com/karthik40404/inquestor.git" target="_blank" class="btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="toggleDetails(this)">
+                        <img src="../static/images/apple ss.jpg" alt="Project 2 Image">
+                        <h3>Apple website</h3>
+                        <p><b>Apple clone</b></p>
+                        <div class="project-details">
+                            <p>Developed a responsive clone of the APPLE website, accurately replicating its layout and  providing a visually appealing interface.</p>
+                            <p>Technologies Used: HTML, CSS, Bootstrap.</p>
+                            <a href="#" target="_blank" class="btn">View Demo</a>
+                            <a href="https://github.com/AromalP2002/appl" target="_blank" class="btn">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>If you have any questions or opportunities, feel free to reach out!</p>
+                <p>
+                    Email:
+                    <a href="mailto:akhilaromal938@gmail.com" class="btn">Send me an email</a>
+                </p>
+                <p class="pn">
+                    Phone number:9778171381
+                </p>
+            </div>
+        </section>                
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Aromalp. All Rights Reserved.</p>
+                <div class="social-links-footer">
+                    <a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                  
+                    <a href="https://github.com/AromalP2002" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                 
+                </div>
+            </div>
+        </footer>        
+    </div>
+
+
+
+    <script>
+        function openNav() {
+          document.getElementById("sideNav").style.width = "250px";
+          document.getElementById("openbtn").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("sideNav").style.width = "0";
+          document.getElementById("openbtn").style.marginLeft= "0";
+        }
+      </script>
+</body>
+</html>

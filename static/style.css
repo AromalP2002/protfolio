@@ -120,13 +120,14 @@ body {
 }
 /* Section Styles */
 .header {
-    background-image: url('/static/images/baw.jpg');
+    background-image: url('/static/images/prt.jpg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
     padding: 40px 0; 
     color: rgb(0, 0, 0); /* Makes text color white for better contrast */
     text-align: center; /* Centers the text */
+     /* Adds a slight transparency to the background image */
 }
 
 
